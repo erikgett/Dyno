@@ -7,7 +7,10 @@
 		<UseWindowsForms>true</UseWindowsForms>
 		<UseWPF>true</UseWPF>
 		<ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
-		<Configurations>R21_Debug;R22_Debug;R20_Debug;R23_Debug;R24_Debug;R25_Debug;R26_Debug;R27_Debug;R20_Release;R21_Release;R22_Release;R23_Release;R24_Release;R25_Release;R26_Release;R27_Release</Configurations>
+		<Configurations>
+			R20_Debug;R21_Debug;R22_Debug;R23_Debug;R24_Debug;R25_Debug;R26_Debug;R27_Debug;
+			R20_Release;R21_Release;R22_Release;R23_Release;R24_Release;R25_Release;R26_Release;R27_Release
+		</Configurations>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="$(Configuration.Contains('R20'))">
