@@ -56,19 +56,19 @@
 
 	<ItemGroup>
 		<Reference Include="CoreNodeModels">
-			<HintPath>..\..\..\..\..\Program Files\Autodesk\Revit $(RevitVersion)\AddIns\DynamoForRevit\nodes\CoreNodeModels.dll</HintPath>
+			<HintPath>$(ProgramW6432)\Autodesk\Revit $(RevitVersion)\AddIns\DynamoForRevit\nodes\CoreNodeModels.dll</HintPath>
 		</Reference>
 		<Reference Include="DSRevitNodesUI">
-			<HintPath>..\..\..\..\..\Program Files\Autodesk\Revit $(RevitVersion)\AddIns\DynamoForRevit\Revit\nodes\DSRevitNodesUI.dll</HintPath>
+			<HintPath>$(ProgramW6432)\Autodesk\Revit $(RevitVersion)\AddIns\DynamoForRevit\Revit\nodes\DSRevitNodesUI.dll</HintPath>
 		</Reference>
 		<Reference Include="DynamoCore">
-			<HintPath>..\..\..\..\..\Program Files\Autodesk\Revit $(RevitVersion)\AddIns\DynamoForRevit\DynamoCore.dll</HintPath>
+			<HintPath>$(ProgramW6432)\Autodesk\Revit $(RevitVersion)\AddIns\DynamoForRevit\DynamoCore.dll</HintPath>
 		</Reference>
 		<Reference Include="DynamoRevitDS">
-			<HintPath>..\..\..\..\..\Program Files\Autodesk\Revit $(RevitVersion)\AddIns\DynamoForRevit\Revit\DynamoRevitDS.dll</HintPath>
+			<HintPath>$(ProgramW6432)\Autodesk\Revit $(RevitVersion)\AddIns\DynamoForRevit\Revit\DynamoRevitDS.dll</HintPath>
 		</Reference>
 		<Reference Include="RevitServices">
-			<HintPath>..\..\..\..\..\Program Files\Autodesk\Revit $(RevitVersion)\AddIns\DynamoForRevit\Revit\RevitServices.dll</HintPath>
+			<HintPath>$(ProgramW6432)\Autodesk\Revit $(RevitVersion)\AddIns\DynamoForRevit\Revit\RevitServices.dll</HintPath>
 		</Reference>
 		<Reference Update="System"/>
 		<Reference Update="System.Core"/>

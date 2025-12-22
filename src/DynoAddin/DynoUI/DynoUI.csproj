@@ -6,54 +6,80 @@
     <UseWindowsForms>true</UseWindowsForms>
     <UseWPF>true</UseWPF>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
-    <Configurations>Debug;Debug2019;Debug2020;Part1;Release;R21_Debug;R22_Debug;R20_Debug;R23_Debug;R24_Debug;R25_Debug;R26_Debug;R27_Debug;R20_Release;R21_Release;R22_Release;R23_Release;R24_Release;R25_Release;R26_Release;R27_Release</Configurations>
+    <Configurations>
+		R21_Debug;R22_Debug;R20_Debug;R23_Debug;R24_Debug;R25_Debug;R26_Debug;R27_Debug;
+		R20_Release;R21_Release;R22_Release;R23_Release;R24_Release;R25_Release;R26_Release;R27_Release
+	</Configurations>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R27_Release|AnyCPU'">
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R26_Release|AnyCPU'">
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R25_Release|AnyCPU'">
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R24_Release|AnyCPU'">
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R23_Release|AnyCPU'">
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R22_Release|AnyCPU'">
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R21_Release|AnyCPU'">
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R20_Release|AnyCPU'">
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug 2020|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\Debug 2020\</OutputPath>
-    <PlatformTarget>x64</PlatformTarget>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="RevitAPI">
-      <HintPath>..\..\..\..\..\Program Files\Autodesk\Revit 2020\RevitAPI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="RevitAPIUI">
-      <HintPath>..\..\..\..\..\Program Files\Autodesk\Revit 2020\RevitAPIUI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="WpfAnimatedGif, Version=2.0.0.0, Culture=neutral, PublicKeyToken=9e7cd3b544a090dc, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\WpfAnimatedGif.2.0.0\lib\net40\WpfAnimatedGif.dll</HintPath>
-    </Reference>
-  </ItemGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R20'))">
+		<TargetFramework>net48</TargetFramework>
+		<RevitVersion>2020</RevitVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R21'))">
+		<TargetFramework>net48</TargetFramework>
+		<RevitVersion>2021</RevitVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R22'))">
+		<TargetFramework>net48</TargetFramework>
+		<RevitVersion>2022</RevitVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R23'))">
+		<TargetFramework>net48</TargetFramework>
+		<RevitVersion>2023</RevitVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R24'))">
+		<TargetFramework>net48</TargetFramework>
+		<RevitVersion>2024</RevitVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R25'))">
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<RevitVersion>2025</RevitVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R26'))">
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<RevitVersion>2026</RevitVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R27'))">
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<RevitVersion>2027</RevitVersion>
+	</PropertyGroup>
+
+	<ItemGroup Condition="$(Configuration.Contains('R21'))">
+		<PackageReference Include="Revit_All_Main_Versions_API_x64" Version="2021.1.9" />
+	</ItemGroup>
+
+	<ItemGroup Condition="$(Configuration.Contains('R22'))">
+		<PackageReference Include="Revit_All_Main_Versions_API_x64" Version="2022.1.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="$(Configuration.Contains('R23'))">
+		<PackageReference Include="Revit_All_Main_Versions_API_x64" Version="2023.0.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="$(Configuration.Contains('R24'))">
+		<PackageReference Include="Revit_All_Main_Versions_API_x64" Version="2024.2.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="$(Configuration.Contains('R25'))">
+		<PackageReference Include="Revit_All_Main_Versions_API_x64" Version="2025.0.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="$(Configuration.Contains('R26'))">
+		<PackageReference Include="Revit_All_Main_Versions_API_x64" Version="2026.0.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="$(Configuration.Contains('R27'))">
+		<PackageReference Include="Revit_All_Main_Versions_API_x64" Version="2027.0.0" />
+	</ItemGroup>
+	
   <ItemGroup>
     <Compile Include="..\..\AssemblySharedInfoGenerator\AssemblyDynoInfo.cs">
       <Link>Properties\AssemblyDynoInfo.cs</Link>
@@ -64,19 +90,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\par.png" />
+	  <Resource Include="Images\res.png" />
+	  <Resource Include="Images\about.png" />
+	  <Resource Include="logo_prorubim_full.png" />
+	  <Resource Include="Images\prorubim.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\res.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\about.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="logo_prorubim_full.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\prorubim.png" />
-  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="WpfAnimatedGif" Version="2.0.0" />
   </ItemGroup>

@@ -1,116 +1,100 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
-    <OutputType>Library</OutputType>
-    <RootNamespace>Prorubim.DynoNodes</RootNamespace>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <UseWPF>true</UseWPF>
-    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
-    <Configurations>Debug;Debug2019;Debug2020;Part1;Release;R21_Debug;R22_Debug;R20_Debug;R23_Debug;R24_Debug;R25_Debug;R26_Debug;R27_Debug;R20_Release;R21_Release;R22_Release;R23_Release;R24_Release;R25_Release;R26_Release;R27_Release</Configurations>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>C:\Program Files\Prorubim Nodes\Prorubim Dyno\bin\</OutputPath>
-    <DocumentationFile>D:\Dropbox %28Личный%29\_PRORUBIM\01. Проекты\04.Разработки\DynamoNodes\packages\Prorubim Dyno\bin\DynoNodes.xml</DocumentationFile>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R27_Debug|AnyCPU'">
-    <OutputPath>C:\Program Files\Prorubim Nodes\Prorubim Dyno\bin\</OutputPath>
-    <DocumentationFile>D:\Dropbox %28Личный%29\_PRORUBIM\01. Проекты\04.Разработки\DynamoNodes\packages\Prorubim Dyno\bin\DynoNodes.xml</DocumentationFile>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R24_Debug|AnyCPU'">
-    <OutputPath>C:\Program Files\Prorubim Nodes\Prorubim Dyno\bin\</OutputPath>
-    <DocumentationFile>D:\Dropbox %28Личный%29\_PRORUBIM\01. Проекты\04.Разработки\DynamoNodes\packages\Prorubim Dyno\bin\DynoNodes.xml</DocumentationFile>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R23_Debug|AnyCPU'">
-    <OutputPath>C:\Program Files\Prorubim Nodes\Prorubim Dyno\bin\</OutputPath>
-    <DocumentationFile>D:\Dropbox %28Личный%29\_PRORUBIM\01. Проекты\04.Разработки\DynamoNodes\packages\Prorubim Dyno\bin\DynoNodes.xml</DocumentationFile>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R20_Debug|AnyCPU'">
-    <OutputPath>C:\Program Files\Prorubim Nodes\Prorubim Dyno\bin\</OutputPath>
-    <DocumentationFile>D:\Dropbox %28Личный%29\_PRORUBIM\01. Проекты\04.Разработки\DynamoNodes\packages\Prorubim Dyno\bin\DynoNodes.xml</DocumentationFile>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R22_Debug|AnyCPU'">
-    <OutputPath>C:\Program Files\Prorubim Nodes\Prorubim Dyno\bin\</OutputPath>
-    <DocumentationFile>D:\Dropbox %28Личный%29\_PRORUBIM\01. Проекты\04.Разработки\DynamoNodes\packages\Prorubim Dyno\bin\DynoNodes.xml</DocumentationFile>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R21_Debug|AnyCPU'">
-    <OutputPath>C:\Program Files\Prorubim Nodes\Prorubim Dyno\bin\</OutputPath>
-    <DocumentationFile>D:\Dropbox %28Личный%29\_PRORUBIM\01. Проекты\04.Разработки\DynamoNodes\packages\Prorubim Dyno\bin\DynoNodes.xml</DocumentationFile>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>..\..\..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\</OutputPath>
-    <DocumentationFile>..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\DynoNodes.xml</DocumentationFile>
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R27_Release|AnyCPU'">
-    <OutputPath>..\..\..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\</OutputPath>
-    <DocumentationFile>..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\DynoNodes.xml</DocumentationFile>
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R26_Release|AnyCPU'">
-    <OutputPath>..\..\..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\</OutputPath>
-    <DocumentationFile>..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\DynoNodes.xml</DocumentationFile>
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R25_Release|AnyCPU'">
-    <OutputPath>..\..\..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\</OutputPath>
-    <DocumentationFile>..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\DynoNodes.xml</DocumentationFile>
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R24_Release|AnyCPU'">
-    <OutputPath>..\..\..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\</OutputPath>
-    <DocumentationFile>..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\DynoNodes.xml</DocumentationFile>
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R23_Release|AnyCPU'">
-    <OutputPath>..\..\..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\</OutputPath>
-    <DocumentationFile>..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\DynoNodes.xml</DocumentationFile>
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R22_Release|AnyCPU'">
-    <OutputPath>..\..\..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\</OutputPath>
-    <DocumentationFile>..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\DynoNodes.xml</DocumentationFile>
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R21_Release|AnyCPU'">
-    <OutputPath>..\..\..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\</OutputPath>
-    <DocumentationFile>..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\DynoNodes.xml</DocumentationFile>
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R20_Release|AnyCPU'">
-    <OutputPath>..\..\..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\</OutputPath>
-    <DocumentationFile>..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\DynoNodes.xml</DocumentationFile>
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug 2020|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\Debug 2020\</OutputPath>
-    <DocumentationFile>D:\Dropbox %28Личный%29\_PRORUBIM\01. Проекты\04.Разработки\DynamoNodes\packages\Prorubim Dyno\bin\DynoNodes.xml</DocumentationFile>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="DynamoCore">
-      <HintPath>..\..\..\..\..\Program Files\Autodesk\Revit 2021\AddIns\DynamoForRevit\DynamoCore.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DynamoRevitDS">
-      <HintPath>..\..\..\..\..\Program Files\Autodesk\Revit 2020\AddIns\DynamoForRevit\Revit\DynamoRevitDS.dll</HintPath>
-    </Reference>
-    <Reference Include="DynamoServices">
-      <HintPath>..\..\..\..\..\Program Files\Autodesk\Revit 2021\AddIns\DynamoForRevit\DynamoServices.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="RevitAPI">
-      <HintPath>..\..\..\..\..\Program Files\Autodesk\Revit 2021\RevitAPI.dll</HintPath>
-    </Reference>
-    <Reference Include="RevitAPIUI">
-      <HintPath>..\..\..\..\..\Program Files\Autodesk\Revit 2021\RevitAPIUI.dll</HintPath>
-    </Reference>
-    <Reference Include="RevitServices">
-      <HintPath>..\..\..\..\..\Program Files\Autodesk\Revit 2020\AddIns\DynamoForRevit\Revit\RevitServices.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\DynoCore\DynoCore.csproj" />
-  </ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>net48</TargetFramework>
+		<OutputType>Library</OutputType>
+		<RootNamespace>Prorubim.DynoNodes</RootNamespace>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<UseWPF>true</UseWPF>
+		<ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+		<Configurations>
+			R21_Debug;R22_Debug;R20_Debug;R23_Debug;R24_Debug;R25_Debug;R26_Debug;R27_Debug;
+			R20_Release;R21_Release;R22_Release;R23_Release;R24_Release;R25_Release;R26_Release;R27_Release
+		</Configurations>
+	</PropertyGroup>
+	
+	<PropertyGroup Condition="$(Configuration.Contains('R20'))">
+		<TargetFramework>net48</TargetFramework>
+		<RevitVersion>2020</RevitVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R21'))">
+		<TargetFramework>net48</TargetFramework>
+		<RevitVersion>2021</RevitVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R22'))">
+		<TargetFramework>net48</TargetFramework>
+		<RevitVersion>2022</RevitVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R23'))">
+		<TargetFramework>net48</TargetFramework>
+		<RevitVersion>2023</RevitVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R24'))">
+		<TargetFramework>net48</TargetFramework>
+		<RevitVersion>2024</RevitVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R25'))">
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<RevitVersion>2025</RevitVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R26'))">
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<RevitVersion>2026</RevitVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R27'))">
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<RevitVersion>2027</RevitVersion>
+	</PropertyGroup>
+
+	<ItemGroup Condition="$(Configuration.Contains('R21'))">
+		<PackageReference Include="Revit_All_Main_Versions_API_x64" Version="2021.1.9" />
+	</ItemGroup>
+
+	<ItemGroup Condition="$(Configuration.Contains('R22'))">
+		<PackageReference Include="Revit_All_Main_Versions_API_x64" Version="2022.1.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="$(Configuration.Contains('R23'))">
+		<PackageReference Include="Revit_All_Main_Versions_API_x64" Version="2023.0.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="$(Configuration.Contains('R24'))">
+		<PackageReference Include="Revit_All_Main_Versions_API_x64" Version="2024.2.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="$(Configuration.Contains('R25'))">
+		<PackageReference Include="Revit_All_Main_Versions_API_x64" Version="2025.0.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="$(Configuration.Contains('R26'))">
+		<PackageReference Include="Revit_All_Main_Versions_API_x64" Version="2026.0.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="$(Configuration.Contains('R27'))">
+		<PackageReference Include="Revit_All_Main_Versions_API_x64" Version="2027.0.0" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<Reference Include="DynamoCore">
+			<HintPath>$(ProgramW6432)\Autodesk\Revit $(RevitVersion)\AddIns\DynamoForRevit\DynamoCore.dll</HintPath>
+		</Reference>
+		<Reference Include="DynamoRevitDS">
+			<HintPath>$(ProgramW6432)\Autodesk\Revit $(RevitVersion)\AddIns\DynamoForRevit\Revit\DynamoRevitDS.dll</HintPath>
+		</Reference>
+		<Reference Include="DynamoServices">
+			<HintPath>$(ProgramW6432)\Autodesk\Revit $(RevitVersion)\AddIns\DynamoForRevit\DynamoServices.dll</HintPath>
+		</Reference>
+		<Reference Include="RevitServices">
+			<HintPath>$(ProgramW6432)\Autodesk\Revit $(RevitVersion)\AddIns\DynamoForRevit\Revit\RevitServices.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\DynoCore\DynoCore.csproj" />
+	</ItemGroup>
 </Project>
