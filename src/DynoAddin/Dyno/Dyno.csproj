@@ -6,13 +6,61 @@
     <UseWindowsForms>true</UseWindowsForms>
     <UseWPF>true</UseWPF>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
-    <Configurations>Debug;Debug2019;Debug2020;Part1;Release</Configurations>
+    <Configurations>Debug;Debug2019;Debug2020;Part1;Release;R21_Debug;R22_Debug;R20_Debug;R23_Debug;R24_Debug;R25_Debug;R26_Debug;R27_Debug;R20_Release;R21_Release;R22_Release;R23_Release;R24_Release;R25_Release;R26_Release;R27_Release</Configurations>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>..\..\..\..\..\..\..\Dyno\</OutputPath>
     <DefineConstants>TRACE;DEBUG;ENABLE_DYNAMO_SCHEDULER</DefineConstants>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R27_Debug|AnyCPU'">
+    <OutputPath>..\..\..\..\..\..\..\Dyno\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;ENABLE_DYNAMO_SCHEDULER</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R24_Debug|AnyCPU'">
+    <OutputPath>..\..\..\..\..\..\..\Dyno\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;ENABLE_DYNAMO_SCHEDULER</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R23_Debug|AnyCPU'">
+    <OutputPath>..\..\..\..\..\..\..\Dyno\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;ENABLE_DYNAMO_SCHEDULER</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R20_Debug|AnyCPU'">
+    <OutputPath>..\..\..\..\..\..\..\Dyno\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;ENABLE_DYNAMO_SCHEDULER</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R22_Debug|AnyCPU'">
+    <OutputPath>..\..\..\..\..\..\..\Dyno\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;ENABLE_DYNAMO_SCHEDULER</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R21_Debug|AnyCPU'">
+    <OutputPath>..\..\..\..\..\..\..\Dyno\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;ENABLE_DYNAMO_SCHEDULER</DefineConstants>
+  </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\..\..\..\Dyno\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R27_Release|AnyCPU'">
+    <OutputPath>..\..\..\..\..\Dyno\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R26_Release|AnyCPU'">
+    <OutputPath>..\..\..\..\..\Dyno\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R25_Release|AnyCPU'">
+    <OutputPath>..\..\..\..\..\Dyno\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R24_Release|AnyCPU'">
+    <OutputPath>..\..\..\..\..\Dyno\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R23_Release|AnyCPU'">
+    <OutputPath>..\..\..\..\..\Dyno\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R22_Release|AnyCPU'">
+    <OutputPath>..\..\..\..\..\Dyno\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R21_Release|AnyCPU'">
+    <OutputPath>..\..\..\..\..\Dyno\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R20_Release|AnyCPU'">
     <OutputPath>..\..\..\..\..\Dyno\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug2019|AnyCPU' ">

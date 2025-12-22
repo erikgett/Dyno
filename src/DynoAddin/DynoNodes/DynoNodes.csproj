@@ -6,13 +6,77 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <UseWPF>true</UseWPF>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
-    <Configurations>Debug;Debug2019;Debug2020;Part1;Release</Configurations>
+    <Configurations>Debug;Debug2019;Debug2020;Part1;Release;R21_Debug;R22_Debug;R20_Debug;R23_Debug;R24_Debug;R25_Debug;R26_Debug;R27_Debug;R20_Release;R21_Release;R22_Release;R23_Release;R24_Release;R25_Release;R26_Release;R27_Release</Configurations>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>C:\Program Files\Prorubim Nodes\Prorubim Dyno\bin\</OutputPath>
     <DocumentationFile>D:\Dropbox %28Личный%29\_PRORUBIM\01. Проекты\04.Разработки\DynamoNodes\packages\Prorubim Dyno\bin\DynoNodes.xml</DocumentationFile>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R27_Debug|AnyCPU'">
+    <OutputPath>C:\Program Files\Prorubim Nodes\Prorubim Dyno\bin\</OutputPath>
+    <DocumentationFile>D:\Dropbox %28Личный%29\_PRORUBIM\01. Проекты\04.Разработки\DynamoNodes\packages\Prorubim Dyno\bin\DynoNodes.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R24_Debug|AnyCPU'">
+    <OutputPath>C:\Program Files\Prorubim Nodes\Prorubim Dyno\bin\</OutputPath>
+    <DocumentationFile>D:\Dropbox %28Личный%29\_PRORUBIM\01. Проекты\04.Разработки\DynamoNodes\packages\Prorubim Dyno\bin\DynoNodes.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R23_Debug|AnyCPU'">
+    <OutputPath>C:\Program Files\Prorubim Nodes\Prorubim Dyno\bin\</OutputPath>
+    <DocumentationFile>D:\Dropbox %28Личный%29\_PRORUBIM\01. Проекты\04.Разработки\DynamoNodes\packages\Prorubim Dyno\bin\DynoNodes.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R20_Debug|AnyCPU'">
+    <OutputPath>C:\Program Files\Prorubim Nodes\Prorubim Dyno\bin\</OutputPath>
+    <DocumentationFile>D:\Dropbox %28Личный%29\_PRORUBIM\01. Проекты\04.Разработки\DynamoNodes\packages\Prorubim Dyno\bin\DynoNodes.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R22_Debug|AnyCPU'">
+    <OutputPath>C:\Program Files\Prorubim Nodes\Prorubim Dyno\bin\</OutputPath>
+    <DocumentationFile>D:\Dropbox %28Личный%29\_PRORUBIM\01. Проекты\04.Разработки\DynamoNodes\packages\Prorubim Dyno\bin\DynoNodes.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R21_Debug|AnyCPU'">
+    <OutputPath>C:\Program Files\Prorubim Nodes\Prorubim Dyno\bin\</OutputPath>
+    <DocumentationFile>D:\Dropbox %28Личный%29\_PRORUBIM\01. Проекты\04.Разработки\DynamoNodes\packages\Prorubim Dyno\bin\DynoNodes.xml</DocumentationFile>
+  </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\</OutputPath>
+    <DocumentationFile>..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\DynoNodes.xml</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R27_Release|AnyCPU'">
+    <OutputPath>..\..\..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\</OutputPath>
+    <DocumentationFile>..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\DynoNodes.xml</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R26_Release|AnyCPU'">
+    <OutputPath>..\..\..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\</OutputPath>
+    <DocumentationFile>..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\DynoNodes.xml</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R25_Release|AnyCPU'">
+    <OutputPath>..\..\..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\</OutputPath>
+    <DocumentationFile>..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\DynoNodes.xml</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R24_Release|AnyCPU'">
+    <OutputPath>..\..\..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\</OutputPath>
+    <DocumentationFile>..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\DynoNodes.xml</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R23_Release|AnyCPU'">
+    <OutputPath>..\..\..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\</OutputPath>
+    <DocumentationFile>..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\DynoNodes.xml</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R22_Release|AnyCPU'">
+    <OutputPath>..\..\..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\</OutputPath>
+    <DocumentationFile>..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\DynoNodes.xml</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R21_Release|AnyCPU'">
+    <OutputPath>..\..\..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\</OutputPath>
+    <DocumentationFile>..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\DynoNodes.xml</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R20_Release|AnyCPU'">
     <OutputPath>..\..\..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\</OutputPath>
     <DocumentationFile>..\..\..\..\..\Dyno\Confuser\DynoNodes\bin\DynoNodes.xml</DocumentationFile>
     <PlatformTarget>x86</PlatformTarget>

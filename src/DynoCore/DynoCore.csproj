@@ -1,39 +1,76 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
-    <OutputType>Library</OutputType>
-    <RootNamespace>Dyno</RootNamespace>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <UseWindowsForms>true</UseWindowsForms>
-    <UseWPF>true</UseWPF>
-    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
-    <Configurations>Debug;Debug2019;Debug2020;Part1;Release</Configurations>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>..\..\..\..\..\..\..\Dyno\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;ENABLE_DYNAMO_SCHEDULER</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug 2020|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\Debug 2020\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;ENABLE_DYNAMO_SCHEDULER</DefineConstants>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="AdWindows, Version=6.3.0.29, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Program Files\Autodesk\Revit 2020\AdWindows.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.ServiceModel" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\AssemblySharedInfoGenerator\AssemblyDynoInfo.cs">
-      <Link>Properties\AssemblyDynoInfo.cs</Link>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="protobuf-net" Version="2.4.6" />
-  </ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>net48</TargetFramework>
+		<OutputType>Library</OutputType>
+		<RootNamespace>Dyno</RootNamespace>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<UseWindowsForms>true</UseWindowsForms>
+		<UseWPF>true</UseWPF>
+		<ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+		<Configurations>R21_Debug;R22_Debug;R20_Debug;R23_Debug;R24_Debug;R25_Debug;R26_Debug;R27_Debug;R20_Release;R21_Release;R22_Release;R23_Release;R24_Release;R25_Release;R26_Release;R27_Release</Configurations>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R20'))">
+		<TargetFramework>net48</TargetFramework>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R21'))">
+		<TargetFramework>net48</TargetFramework>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R22'))">
+		<TargetFramework>net48</TargetFramework>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R23'))">
+		<TargetFramework>net48</TargetFramework>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R24'))">
+		<TargetFramework>net48</TargetFramework>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R25'))">
+		<TargetFramework>net8.0-windows</TargetFramework>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R26'))">
+		<TargetFramework>net8.0-windows</TargetFramework>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration.Contains('R27'))">
+		<TargetFramework>net8.0-windows</TargetFramework>
+	</PropertyGroup>
+	
+	<ItemGroup Condition="$(Configuration.Contains('R21'))">
+		<PackageReference Include="Revit_All_Main_Versions_API_x64" Version="2021.1.9" />
+	</ItemGroup>
+
+	<ItemGroup Condition="$(Configuration.Contains('R22'))">
+		<PackageReference Include="Revit_All_Main_Versions_API_x64" Version="2022.1.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="$(Configuration.Contains('R23'))">
+		<PackageReference Include="Revit_All_Main_Versions_API_x64" Version="2023.0.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="$(Configuration.Contains('R24'))">
+		<PackageReference Include="Revit_All_Main_Versions_API_x64" Version="2024.2.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="$(Configuration.Contains('R25'))">
+		<PackageReference Include="Revit_All_Main_Versions_API_x64" Version="2025.0.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="$(Configuration.Contains('R26'))">
+		<PackageReference Include="Revit_All_Main_Versions_API_x64" Version="2026.0.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition="$(Configuration.Contains('R27'))">
+		<PackageReference Include="Revit_All_Main_Versions_API_x64" Version="2027.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="protobuf-net" Version="2.4.6" />
+	</ItemGroup>
 </Project>
