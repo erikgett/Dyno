@@ -54,18 +54,18 @@ namespace Dyno
 
         public override Result OnStartup(UIControlledApplication application)
         {
-            base.OnStartup(application);
-            DynoManager = new DynoManager();
-
-            DynoManager.InitExternalEvents();
-            Instance = this;
-
-            UiControlledApp.DockableFrameVisibilityChanged += Application_DockableFrameVisibilityChanged;
-
-            CreateRibbonButton();
-
             try
             {
+                base.OnStartup(application);
+                DynoManager = new DynoManager();
+
+                DynoManager.InitExternalEvents();
+                Instance = this;
+
+                UiControlledApp.DockableFrameVisibilityChanged += Application_DockableFrameVisibilityChanged;
+
+                CreateRibbonButton();
+
                 SettingsWindow = new SettingsWindow {DataContext = DynoManager.Settings};
                 SettingsWindow.FolderRemove += (o, args) =>
                 {

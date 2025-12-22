@@ -7,6 +7,7 @@
 		<UseWPF>true</UseWPF>
 		<ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
 		<OutputPath>bin\$(Configuration)\</OutputPath>
+		<EnableDynamicLoading>true</EnableDynamicLoading>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<StartAction>Program</StartAction>
 		<StartArguments>Runner.txt</StartArguments>
