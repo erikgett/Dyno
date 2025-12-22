@@ -108,10 +108,20 @@ namespace Prorubim.DynoRevitCore
 
             var modulePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
                 "Dyno\\");
+#if !NET8_0_OR_GREATER
             var ab = AppDomain.CurrentDomain.DefineDynamicAssembly(aName, AssemblyBuilderAccess.RunAndSave,
                 modulePath);
-
             var mb = ab.DefineDynamicModule(aName.Name, aName.Name + ".dll");
+#else
+            var ab = AssemblyBuilder.DefineDynamicAssembly(
+                aName,
+                AssemblyBuilderAccess.Run);
+
+            var mb = ab.DefineDynamicModule(aName.Name);
+            // save method not availeble in .net 8
+#endif
+
+
 
             foreach (var storageFolder in storageFolders)
             {
@@ -119,6 +129,7 @@ namespace Prorubim.DynoRevitCore
                 CreateRibbonWorkspaceButtons(root, packageName, buttonsFile, mb, createButtons);
             }
 
+#if !NET8_0_OR_GREATER
             try
             {
                 if (createButtons)
@@ -128,6 +139,7 @@ namespace Prorubim.DynoRevitCore
             {
                 // ignored
             }
+#endif
         }
 
         internal static void CreateRibbonWorkspaceButtons(WorkspaceGroup root, string packageName, string buttonsFile,

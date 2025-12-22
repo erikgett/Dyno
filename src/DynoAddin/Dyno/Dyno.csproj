@@ -6,6 +6,10 @@
 		<UseWindowsForms>true</UseWindowsForms>
 		<UseWPF>true</UseWPF>
 		<ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+		<OutputPath>bin\$(Configuration)\</OutputPath>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<StartAction>Program</StartAction>
+		<StartArguments>Runner.txt</StartArguments>
 		<Configurations>
 			Debug2020;Part1;Release;R21_Debug;R22_Debug;R20_Debug;R23_Debug;R24_Debug;R25_Debug;R26_Debug;R27_Debug;
 			R20_Release;R21_Release;R22_Release;R23_Release;R24_Release;R25_Release;R26_Release;R27_Release
@@ -53,9 +57,7 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(RevitVersion)' != ''">
-		<StartProgram>
-			C:\Program Files\Autodesk\Revit $(RevitVersion)\Revit.exe
-		</StartProgram>
+		<StartProgram>C:\Program Files\Autodesk\Revit $(RevitVersion)\Revit.exe</StartProgram>
 	</PropertyGroup>
 
 	<ItemGroup Condition="$(Configuration.Contains('R21'))">
@@ -128,7 +130,9 @@
 		<Reference Update="System.Drawing" />
 		<Reference Include="Microsoft.CSharp" />
 		<Reference Update="System.Xml" />
+		<PackageReference Include="Kveer.XmlRPC" Version="1.3.1" />
 	</ItemGroup>
+	
 	<ItemGroup>
 		<Compile Include="..\..\AssemblySharedInfoGenerator\AssemblyDynoInfo.cs">
 			<Link>Properties\AssemblyDynoInfo.cs</Link>
@@ -166,8 +170,13 @@
 		<Content Include="Resources\logo_button.png" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <PackageReference Include="Kveer.XmlRPC" Version="1.3.1" />
-	</ItemGroup>
-	<PropertyGroup />
+	<PropertyGroup>
+		<PreBuildEvent>
+			if not exist "$(MSBuildProjectDirectory)\bin\$(Configuration)\Dyno.addin" copy "$(MSBuildProjectDirectory)\Dyno.addin" "$(MSBuildProjectDirectory)\bin\$(Configuration)\"
+			if not exist "$(MSBuildProjectDirectory)\bin\$(Configuration)\Runner.txt" copy "$(MSBuildProjectDirectory)\Runner.txt" "$(MSBuildProjectDirectory)\bin\$(Configuration)\"
+		</PreBuildEvent>
+	</PropertyGroup>
+	<PropertyGroup>
+		<PostBuildEvent>for %%f in ("$(MSBuildProjectDirectory)\$(OutputPath)*journal*.*") do del "%%f"</PostBuildEvent>
+	</PropertyGroup>
 </Project>
