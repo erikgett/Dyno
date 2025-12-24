@@ -57,7 +57,10 @@ namespace Dyno
             try
             {
                 base.OnStartup(application);
-                DynoManager = new DynoManager();
+
+                int revitVersion = int.Parse(application.ControlledApplication.VersionNumber);
+
+                DynoManager = new DynoManager(revitVersion);
 
                 DynoManager.InitExternalEvents();
                 Instance = this;

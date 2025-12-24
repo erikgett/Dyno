@@ -160,7 +160,10 @@ namespace Prorubim.DynoRevitCore
             Doc = e.Document;
 
             if (DynamoProductsManager.SelectedProduct != null)
-                GetManager().OnDocumentChanged();
+            {
+                DynoManagerBase dynoManagerBase = GetManager();
+                dynoManagerBase.OnDocumentChanged();
+            }
         }
 
         public virtual Result OnShutdown(UIControlledApplication application) => Result.Succeeded;

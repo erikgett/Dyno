@@ -20,9 +20,9 @@ namespace Dyno.Manager
 
         public override DynoSettingsBase GetSettingsBase() => Settings;
 
-        public DynoManager()
+        public DynoManager(int revitVersion)
         {
-            Settings = DynoSettings.ReadSettings();
+            Settings = DynoSettings.ReadSettings(revitVersion);
             Packages.Add(new WorkspaceGroupPackage {Name = "Dyno", Root = Root});
             ScanFileStorage(true);
         }
