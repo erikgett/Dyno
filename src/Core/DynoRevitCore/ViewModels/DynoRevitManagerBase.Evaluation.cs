@@ -44,7 +44,7 @@ namespace Prorubim.DynoRevitCore.ViewModels
             }
             errorsPar.Childs.Clear();
 
-            foreach (var node in RevitDynamoModelInstance.CurrentWorkspace.Nodes)
+            foreach (NodeModel node in RevitDynamoModelInstance.CurrentWorkspace.Nodes)
             {
                 var nodeName = "";
                 if (DynamoProductsManager.SelectedProduct.VersionInfo.ToString(1) == "1")
@@ -61,9 +61,18 @@ namespace Prorubim.DynoRevitCore.ViewModels
                         node.GetType() == typeof(DSModelElementsSelection) || node is ReferenceSelection)
                         errorsPar.Childs.Add($"Warning in node: {nodeName} - Nothing selected");
                     else
+                    {
+#if !NET8_0_OR_GREATER
                         errorsPar.Childs.Add(node.ToolTipText != ""
                             ? $"Error in node: {nodeName} - {node.ToolTipText}"
                             : $"Error in node: {nodeName} - Unknown error");
+#else
+                        errorsPar.Childs.Add(node.Name != ""
+                            ? $"Error in node: {nodeName} - {node.Name}"
+                            : $"Error in node: {nodeName} - Unknown error");
+#endif
+                    }    
+
                 }
 
                 if (!(_runnedWorkspacePreset.GetParameterByName("Starting Time") is OutputParameter startingTimePar))

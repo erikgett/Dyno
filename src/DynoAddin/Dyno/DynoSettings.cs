@@ -25,8 +25,10 @@ namespace Dyno
     }
 
     [Serializable]
-    public class DynoSettings : DynoSettingsBase
+    public class DynoSettings() : DynoSettingsBase
     {
+        private static string config;
+
         public bool WindowShowing = false;
         public string Filter = "";
         public List<string> ExpandedKnots = new List<string>();
@@ -43,16 +45,30 @@ namespace Dyno
 
         public void WriteSettings(Window mainWindow)
         {
-            WriteSettings("Dyno\\Dyno.cfg", this);
+            WriteSettings(config, this);
         }
 
         public bool Contains(string path) => StorageFoldersZip.Any(x => x.Path == path);
 
         public StorageFolderItem GetItemByPath(string path) => StorageFoldersZip.FirstOrDefault(x => x.Path == path);
 
-        public static DynoSettings ReadSettings()
+        public static DynoSettings ReadSettings(int revitVersion)
         {
-            var settings = ReadSettings<DynoSettings>("Dyno\\Dyno.cfg");
+            string oldConfig = "Dyno\\Dyno.cfg";
+
+            config = $"Dyno\\Dyno{revitVersion}.cfg";
+
+            var dynoOldSettingsPath = Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), oldConfig);
+            
+            var dynoSettingsPath = Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), config);
+            if (!File.Exists(dynoSettingsPath) && File.Exists(dynoOldSettingsPath))
+            {
+                File.Copy(dynoOldSettingsPath, dynoSettingsPath);
+            }
+
+            var settings = ReadSettings<DynoSettings>(config);
             return settings;
         }
     }
